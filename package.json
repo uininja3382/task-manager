@@ -1,0 +1,20 @@
+{
+  "name": "nothing-app",
+  "version": "1.0.0",
+  "source": "./src/index.html",
+  "description": "I dont know what is this project about",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel ./src/index.html",
+    "build": "parcel build ./src/index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.19.0",
+    "eslint": "^9.19.0",
+    "globals": "^15.14.0",
+    "parcel": "^2.13.3"
+  }
+}
