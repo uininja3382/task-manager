@@ -600,7 +600,6 @@ var _taskUtils = require("./taskUtils/taskUtils");
 const taskContainer = document.querySelector("#task-list-container");
 const taskInput = document.querySelector("#task-input");
 const addTaskButton = document.querySelector("#add-task");
-const isTaskListEmpty = document.querySelector("#is-task-list-empty");
 addTaskButton.addEventListener("click", ()=>{
     const task = taskInput.value;
     if (task) {
@@ -629,7 +628,6 @@ parcelHelpers.export(exports, "addTask", ()=>addTask);
 parcelHelpers.export(exports, "getTasks", ()=>getTasks);
 parcelHelpers.export(exports, "removeTask", ()=>removeTask);
 const tasks = [];
-let x;
 function addTask(task) {
     // Interface or an API (Application Programming Interface)
     tasks.push(task);

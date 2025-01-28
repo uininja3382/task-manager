@@ -1,5 +1,4 @@
 const tasks = [];
-let x;
 
 export function addTask(task) {
   // Interface or an API (Application Programming Interface)
