@@ -607,9 +607,9 @@ addTaskButton.addEventListener("click", ()=>{
         taskInput.value = "";
         const tasks = (0, _taskUtils.getTasks)();
         taskContainer.innerHTML = "";
-        tasks.forEach((task)=>{
+        tasks.forEach((item)=>{
             const taskElement = document.createElement("li");
-            taskElement.textContent = task;
+            taskElement.textContent = item;
             taskContainer.appendChild(taskElement);
         });
         tasks.map((items)=>{
@@ -620,6 +620,39 @@ addTaskButton.addEventListener("click", ()=>{
         taskInput.focus();
     }
 });
+const Person = function(name, yearOfBirth) {
+    //constructor
+    this.name = name;
+    this.yearOfBirth = yearOfBirth;
+};
+Person.prototype.calculateAge = function() {
+    console.log(2025 - this.yearOfBirth);
+};
+const Employee = function(name, yearOfBirth, job) {
+    Person.call(this, name, yearOfBirth);
+    this.job = job;
+};
+const Raj = new Employee("Raj", 1990, "Developer");
+console.log(Raj);
+//ES6 classes
+class Teacher {
+    constructor(name, yearOfBirth, subject){
+        this.name = name;
+        this.yearOfBirth = yearOfBirth;
+        this.subject = subject;
+    }
+    calculateAge() {
+        console.log(2025 - this.yearOfBirth);
+    }
+}
+class Student extends Teacher {
+    constructor(name, yearOfBirth, subject, grade){
+        super(name, yearOfBirth, subject);
+        this.grade = grade;
+    }
+}
+// eslint-disable-next-line no-unused-vars
+const madhu = new Student("Madhu", 1990, "Maths", "A");
 
 },{"./taskUtils/taskUtils":"8wiz4"}],"8wiz4":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");

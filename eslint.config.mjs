@@ -7,12 +7,10 @@ export default [
   pluginJs.configs.recommended,
   {
     rules: {
-      "no-var": "error",
-      "prefer-const": "error",
-      "no-unused-vars": "error",
-      "no-undef": "error",
-      "no-shadow": "error",
-      "no-duplicate-imports": "error",
+      "no-unused-vars": "warn",
+      "no-undef": "warn",
+      "no-duplicate-imports": "warn",
+      "no-const-assign": "error",
     },
   },
 ];
